@@ -1,12 +1,10 @@
 # Задача 9.1. Декомпозиція системи аналізу студентських оцінок
-def calculate_student_grades():
-    return [85, 92, 60, 78, 45, 95, 88, 70]
-
-
-def analyze_student_grades():
-    grades = [85, 92, 60, 78, 45, 95, 88, 70]
+grades = [85, 92, 60, 78, 45, 95, 88, 70]
+def analyze_student_grades(grades):
     if not grades:
-        return 0, 0, 0, 0
+        print("Помилка: список оцінок порожній!")
+        return None
+
 
     min_grade = grades[0]
     max_grade = grades[0]
@@ -28,10 +26,10 @@ def analyze_student_grades():
     return max_grade, min_grade, average, past_exam, len(grades)
 
 
-max_g, min_g, avg, past, total_count = analyze_student_grades()
+max_g, min_g, avg, past, total_count = analyze_student_grades(grades)
 
-print(f"Найвищий бал: {max_g}")
-print(f"Найнижчий бал: {min_g}")
+print(f"Найвищий бал: {max_g}, Найнижчий бал {min_g}, Середній бал групи:{avg}")
+
 print(f"Середній бал групи: {avg:.2f}")
 print(f"Кількість студентів, які склали іспит: {past} з {total_count} \n")
 
