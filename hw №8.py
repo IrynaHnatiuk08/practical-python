@@ -22,9 +22,9 @@ def find_max_subarray(arr):
       start = temp_start
       end = i 
 
-  subarra = arr[start : end + 1]
+  subarray = arr[start : end + 1]
 
-  return subarra, max_sum
+  return subarray, max_sum
 
 
 arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
